@@ -1,0 +1,13 @@
+ function checkImageUrl(url) {
+
+    if(!url) return false;
+
+    else{
+        const imageUrlRegex = new RegExp('^https?:\/\/.*\.(jpeg|jpg|gif|png|bmp|webp)$', 'i');
+        console.log('url check response:' + imageUrlRegex.test(url));
+  return imageUrlRegex.test(url);
+    }
+
+}
+
+export default checkImageUrl;
