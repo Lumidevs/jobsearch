@@ -16,6 +16,12 @@ const Popularjobs = () => {
     num_pages: 1
   });
 
+  const [selectedJob, setSelectedJob]= useState();
+
+  const handleCardPress = (item) => {
+
+  }
+
 console.log('data ======================>',data[0])
 
   return (
@@ -39,10 +45,11 @@ console.log('data ======================>',data[0])
             data = {data}
 
             //how the data is to be rendered
-            renderItem = {({item, index}) => (
+            renderItem = {({item}) => (
               <PopularJobCard 
                 item = {item}
-                key={index}
+                selectedJob={selectedJob}
+                handleCardPress={handleCardPress}
 
 
               />
